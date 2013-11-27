@@ -1,36 +1,13 @@
 package builder;
 
-import partes.simples.Direccion;
-import partes.simples.Habitacion;
-import partes.simples.Pared;
-import partes.simples.Puerta;
-import personajes.clases.GuerreroAgua;
-import personajes.clases.GuerreroFuego;
-import personajes.clases.GuerreroInvisible;
-import producto.Laberinto;
-
+/**
+ * Esta clase juega el papel del director del builder.
+ * @author Mauri
+ *
+ */
 public class JuegoDelLaberinto {
-
-	/* Codigo sin aplicar Factory Method
-	 * public final Laberinto crearLaberinto() {
-		Laberinto unLaberinto = new Laberinto();
-		Habitacion h1 = new Habitacion(1);
-		Habitacion h2 = new Habitacion(2);
-		unLaberinto.anadirHabitacion(h1);
-		unLaberinto.anadirHabitacion(h2);
-		Puerta laPuerta = new Puerta(h1, h2);
-		h1.establecerLado(Direccion.NORTE, new Pared());
-		h1.establecerLado(Direccion.ESTE, laPuerta);
-		h1.establecerLado(Direccion.SUR, new Pared());
-		h1.establecerLado(Direccion.OESTE, new Pared());
-		h2.establecerLado(Direccion.NORTE, new Pared());
-		h2.establecerLado(Direccion.ESTE, new Pared());
-		h2.establecerLado(Direccion.SUR, new Pared());
-		h2.establecerLado(Direccion.OESTE, laPuerta);
-		return unLaberinto;
-	}*/
 	
-	// Metodos de fabricacion
+	/*//Metodos de fabricacion
 	public Laberinto fabricarLaberinto() {
 		return new Laberinto();
 	}
@@ -87,6 +64,6 @@ public class JuegoDelLaberinto {
 		h4.establecerLado(Direccion.SUR, fabricarPared());
 		h2.establecerLado(Direccion.OESTE, fabricarPared());
 		return unLaberinto;
-	}
+	}*/
 	
 }
