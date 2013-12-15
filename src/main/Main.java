@@ -1,6 +1,6 @@
 package main;
 
-import producto.Laberinto;
+import concreteBuilder.JuegoDelLaberintoEncantado;
 import director.CreadorJuegosLab;
 
 public class Main {
@@ -8,6 +8,9 @@ public class Main {
 	public static void main(String[] args) {
 		
 		/* ------- HAY QUE HACER UN MENU PARA QUE EL CLIENTE ELIJA COMO SE CREARA EL LABERINTO -------- */
+		
+		JuegoDelLaberintoEncantado hogwarts = new JuegoDelLaberintoEncantado();
+		CreadorJuegosLab director = new CreadorJuegosLab(hogwarts);
 		
 		
 		/*

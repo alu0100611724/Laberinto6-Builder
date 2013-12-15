@@ -1,6 +1,7 @@
 package concreteBuilder;
 
 import partes.simples.Habitacion;
+import partes.simples.Pared;
 import partes.simples.Puerta;
 import partes.sobrecargadas.HabitacionEncantada;
 import partes.sobrecargadas.Hechizo;
@@ -13,18 +14,18 @@ public class JuegoDelLaberintoEncantado extends JuegoDelLaberinto {
 	
 	//cada puerta hechizada necesita un hechizo parar abrirla, que puede estar en cualquier parte del laberinto
 	public JuegoDelLaberintoEncantado() {
-		super();
 		this.idHechizos = 0;
 	}
 
-    //existiran tantas habitaciones encantadas como puertas
-	public Habitacion fabricarHabitacion(int n) {
+	public Habitacion buildHab(int n) {
 		return new HabitacionEncantada(n, Hechizar());
 	}
-	
+	public Pared buildPared() {
+		return new Pared();
+	}
 	
 	//Una puerta encantada posee un unico hechizo que la abrira
-	public Puerta fabricarPuerta(Habitacion h1, Habitacion h2) {
+	public Puerta buildPuerta(Habitacion h1, Habitacion h2) {
 		return new PuertaQueNecesitaHechizo(h1, h2, new Hechizo(idHechizos));
 	}
 	

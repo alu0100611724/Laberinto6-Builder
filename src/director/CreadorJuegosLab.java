@@ -10,7 +10,7 @@ import builder.JuegoDelLaberinto;
 public class CreadorJuegosLab {
 
 	JuegoDelLaberinto builder;
-	CreadorJuegosLab(JuegoDelLaberinto obj){
-		builder=obj;
+	public CreadorJuegosLab(JuegoDelLaberinto builder){
+		this.builder=builder;
 	}
 }
